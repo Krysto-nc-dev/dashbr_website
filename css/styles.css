@@ -63,6 +63,24 @@ img {
   border-color: white;
 }
 
+
+/* Text classes */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
 .section {
   padding: 4rem 0;
 }
@@ -305,6 +323,117 @@ img {
 .summary .list-item:last-child {
   border-bottom: none;
 }
+
+/* Info section */
+.info-container {
+    background: url('../images/audience.jpg') top center/cover no-repeat;
+    display: flex;
+}
+
+.info-content {
+    background-color: var(--primary-color);
+    color: white;
+    flex:1;
+    padding: 4rem;
+}
+
+.info-content h2 {
+    font-size: 2.rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.info-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.info-content ul li {
+   font-size: 1.2rem;
+   line-height: 2;
+}
+
+.info-content i {
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+    font-weight: bolder;
+}
+
+.info-left {
+    width: 50%;
+}
+
+/* Takeways */
+
+.takeaways-cards {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+padding: 1.5rem 0;
+}
+
+.takeaways-cards .card{
+    flex-direction: row;
+    text-align: left;
+
+}
+.takeaways-cards .card i {
+    margin-right: 1rem;
+
+}
+
+
+/* Details */
+
+.details .details-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+   
+
+}
+
+.details img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.details h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+
+.details .heading-border {
+    margin: 0;
+
+}
+.details p {
+    margin: 1rem 0 2rem;
+}
+
+/* Author */
+
+.details + .details .details-flex {
+    flex-direction: row-reverse;
+
+}
+
+.details ul {
+    margin-bottom: 2rem;
+}
+
+.details ul li {
+    line-height: 2;
+}
+
+.details i {
+    margin-right: 0.5rem;
+}
+
+
 /* Media queries */
 
 @media screen and (max-width: 1200px) {
@@ -344,6 +473,15 @@ img {
   .chapter-cards {
     grid-template-columns: 1fr;
   }
+
+  .takeaways-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .details-flex, .details + .details .details-flex {
+    flex-direction: column ;
+    gap: 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .main-menu-items {
@@ -356,6 +494,25 @@ img {
     display: block;
     padding: 10px;
   }
+
+  .info-container {
+    flex-direction: column;
+  }
+  .info-content {
+    padding: 2rem;
+
+  }
+  .info-content h2 {
+    font-size: 1.5rem;
+
+  }
+  .info-content p {
+    font-size: 1rem;
+
+  }
+    .info-left {
+        display: none;
+    }
 }
 @media screen and (max-width: 576px) {
   .hero {
